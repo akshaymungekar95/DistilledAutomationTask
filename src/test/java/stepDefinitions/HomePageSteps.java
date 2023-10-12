@@ -47,7 +47,9 @@ public class HomePageSteps {
         logger= LogManager.getLogger(this.getClass());
 
         //Reading config.properties (for browser)
-        FileReader file=new FileReader(System.getProperty("user.dir")+"\\resources\\config.properties");
+
+        //FileReader file=new FileReader(System.getProperty("user.dir")+"\\resources\\config.properties");
+        FileReader file=new FileReader(System.getProperty("user.dir")+"/resources/config.properties");
         p=new Properties();
         p.load(file);
         br=p.getProperty("browser");
@@ -162,6 +164,8 @@ public class HomePageSteps {
         rp.clickOnFirstResult();
 
         lp = new ListingPage(driver);
+        lp.hideSurvey();
+
         lp.setScrollToDescElement();
 
         boolean result1 = lp.setCapturePropertyDescription(filter);

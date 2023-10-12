@@ -19,6 +19,8 @@ public class ListingPage extends BasePage {
     public By propertyFeaturesLocator = By.xpath("//div[@data-testid='features']/ul/li");
     public By propertyDescriptionLocator = By.xpath("//div[@data-testid='description']/child::div[@data-testid='description']");
 
+    public By hideSurveyLocator = By.cssSelector("button[aria-label=\"Hide survey\"]");
+
 
     public void setScrollToDescElement() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -56,5 +58,13 @@ public class ListingPage extends BasePage {
         WebElement propertyDesc = driver.findElement(propertyDescriptionLocator);
         System.out.println(propertyDesc.getText());
         return propertyDesc.getText().toLowerCase().contains(filter.toLowerCase());
+    }
+
+    public void hideSurvey() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(hideSurveyLocator));
+
+        WebElement hideSurvey = driver.findElement(hideSurveyLocator);
+        hideSurvey.click();
     }
 }
