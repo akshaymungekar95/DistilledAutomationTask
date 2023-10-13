@@ -19,8 +19,14 @@ public class HomePage extends BasePage {
     public void navigateToHomepage(String url) throws InterruptedException {
         driver.get(url);
         driver.manage().window().maximize();
-        WebElement modalLocator = driver.findElement(initialModalLocator);
-        modalLocator.click();
+
+        try {
+            WebElement modalLocator = driver.findElement(initialModalLocator);
+            modalLocator.click();
+        }
+        catch(Exception e) {
+            System.out.println(e+" caused due to headless browser");
+        }
     }
     public void enterDesiredLocation(String location) throws InterruptedException {
         WebElement locationInput = driver.findElement(searchInputLocator);
@@ -28,8 +34,6 @@ public class HomePage extends BasePage {
     }
     public void clickSuggestedLocation() {
         List<WebElement> suggestedList = driver.findElements(dynamicSuggestionsLocator);
-
-        System.out.println(suggestedList.size());
 
         for (WebElement element : suggestedList) {
             if(element.getText().contains("Dublin (County)")) {

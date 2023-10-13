@@ -6,7 +6,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
@@ -29,6 +32,17 @@ public class TestBase {
 		} else if (browser.equalsIgnoreCase(Browsers.FIREFOX.name())) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
+			driver.manage().window().maximize();
+		}
+		else if (browser.equalsIgnoreCase(Browsers.HEADLESS.name())) {
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless");
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+			options.merge(capabilities);
+			driver = new ChromeDriver(options);
+			driver.manage().window().maximize();
 		}
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 	}

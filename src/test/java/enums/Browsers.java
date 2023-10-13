@@ -4,5 +4,6 @@ package enums;
 public enum Browsers {
 	
 	CHROME,
-	FIREFOX
+	FIREFOX,
+	HEADLESS
 }

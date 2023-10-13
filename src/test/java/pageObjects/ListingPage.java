@@ -60,10 +60,14 @@ public class ListingPage extends BasePage {
     }
 
     public void hideSurvey() {
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(hideSurveyLocator));
-
-        WebElement hideSurvey = driver.findElement(hideSurveyLocator);
-        hideSurvey.click();
+        try {
+            wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(hideSurveyLocator));
+            WebElement hideSurvey = driver.findElement(hideSurveyLocator);
+            hideSurvey.click();
+        }
+        catch (Exception e) {
+            System.out.println(e+" caused due to headless browser");
+        }
     }
 }
