@@ -3,11 +3,6 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 import java.util.List;
 
 
@@ -18,7 +13,6 @@ public class HomePage extends BasePage {
     }
 
     public By searchInputLocator = By.id("search-box-input");
-
     public By dynamicSuggestionsLocator = By.xpath("//div/ul[@id='search-box-menu'and @role='listbox']/li");
     public By initialModalLocator = By.cssSelector("#didomi-notice-agree-button");
 

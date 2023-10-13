@@ -62,7 +62,7 @@ public class ResultsPage extends BasePage {
     }
 
     public void clickOnFirstResult() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(firstSearchResultLocator));
 
         WebElement firstResult = driver.findElement(firstSearchResultLocator);

@@ -1,7 +1,7 @@
 Feature: Daft Website Keyword Filtering
 
   Background:
-    Given user navigates to Daft homepage url "https://www.daft.ie/"
+    Given user navigates to Daft homepage url
 
   Scenario Outline: Validate the search results after applying the "garage" keyword filter
     When user searches for county "<county>" in the input field
