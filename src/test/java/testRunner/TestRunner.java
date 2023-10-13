@@ -10,8 +10,10 @@ import org.junit.runner.RunWith;
 					features= {".//src/test/java/features"},
 					glue={"stepDefinitions"},
 					plugin= {
-							"pretty", "html:reports/myreport.html",
-							"rerun:target/rerun.txt"
+							"pretty",
+							"html:target/cucumber-reports/CucumberTestReport.html",
+							"json:target/cucumber-reports/CucumberTestReport.json",
+							"rerun:target/cucumber-reports/rerun.txt"
 							},
 					dryRun=false,
 					monochrome=true,
