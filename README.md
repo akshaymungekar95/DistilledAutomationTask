@@ -96,10 +96,10 @@ Feature: Daft Website Keyword Filtering
     Examples:
       | county | filter |
       | Dublin | garage |
-	  
+```	  
 Implement step definitions in Java under src/test/java/stepDefinitions.
 Each step in the scenario should have a corresponding step definition.
-		
+```		
    @Given("user navigates to Daft homepage url")
     public void user_navigates_to_daft_homepage_url() throws InterruptedException {
         logger.info("Navigating to url");
