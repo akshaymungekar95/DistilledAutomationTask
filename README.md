@@ -121,5 +121,4 @@ In the case of test failures, a screen-shot of the UI at the point of failure is
 
 Sample Cucumber Report:
 
-<img src = "
-https://github.com/akshaymungekar95/DistilledAutomationTask/blob/master/images/Cucumber_report.png" title = "cucumber-html-report"/>
+<img src = "https://github.com/akshaymungekar95/DistilledAutomationTask/blob/master/images/Cucumber_report.png" title = "cucumber-html-report"/>
