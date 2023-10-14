@@ -1,4 +1,4 @@
-[![Java CI with Maven](https://github.com/akshaymungekar95/DistilledAutomationTask/actions/workflows/maven.yml/badge.svg)](https://github.com/akshaymungekar95/DistilledAutomationTask/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/akshaymungekar95/DistilledAutomationTask/actions/workflows/maven.yml/badge.svg)](https://github.com/akshaymungekar95/DistilledAutomationTask/actions/workflows/cucumber-ci.yml)
 
 
 
@@ -61,22 +61,22 @@ git clone https://github.com/akshaymungekar95/DistilledAutomationTask.git
 ## For executing tests on browser,
 
 
-2.1 Navigate to the project's root directory,
+2.1 Navigate to the project's root directory,<br>
 ```cd DistilledAutomationTask/src/test/java/stepDefinitions/ServiceHooks.java```
 
-2.2 Update the following line,
-```testBase.selectBrowser(Browsers.HEADLESS.name()); ```
-	TO
+2.2 Update the following line,<br>
+```testBase.selectBrowser(Browsers.HEADLESS.name()); ```<br>
+	TO<br>
 	``` testBase.selectBrowser(Browsers.CHROME.name()); ```
 				   
-2.3 Execute the following command,
+2.3 Execute the following command,<br>
 	```mvn clean install```
 	
 ## For executing tests on headless mode,
-3.1 Navigate to the project's root directory,
+3.1 Navigate to the project's root directory,<br>
 ```cd DistilledAutomationTask```
 
-3.2  Execute the following command,
+3.2  Execute the following command,<br>
 ```mvn clean install```
 	
 ## Writing Tests
