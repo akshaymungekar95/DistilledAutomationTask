@@ -18,11 +18,8 @@ import org.junit.runner.RunWith;
 							},
 					dryRun=false,
 					monochrome=true,
-					publish=true
-					//tags="@sanity"  // this will execute scenarios tagged with @sanity
-					//tags="@sanity and @regression" //Scenarios tagged with both @sanity and @regression
-					//tags="@sanity and not @regression" //Scenarios tagged with @sanity but not tagged with @regression
-					//tags="@sanity or @regression" //Scenarios tagged with either @sanity or @regression
+					publish=true,
+					tags="@smoke or @regression"
 		)
 public class TestRunner {
 }
