@@ -1,6 +1,4 @@
-[![Java CI with Maven](https://github.com/akshaymungekar95/DistilledAutomationTask/actions/workflows/maven.yml/badge.svg)](https://github.com/akshaymungekar95/DistilledAutomationTask/actions/workflows/cucumber-ci.yml)
-
-
+[![Java CI with Maven](https://github.com/akshaymungekar95/DistilledAutomationTask/actions/workflows/cucumber-ci.yml/badge.svg)](https://github.com/akshaymungekar95/DistilledAutomationTask/actions/workflows/cucumber-ci.yml)
 
 # Distilled UI Automation Task
 
