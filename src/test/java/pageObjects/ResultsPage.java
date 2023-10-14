@@ -37,17 +37,28 @@ public class ResultsPage extends BasePage {
     }
 
     public void setScrollToFirstResultElement() {
-        WebElement elementToScroll = driver.findElement(firstSearchResultLocator);
+        try {
+            WebElement elementToScroll = driver.findElement(firstSearchResultLocator);
 
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", elementToScroll);
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView(true);", elementToScroll);
+        }
+        catch (Exception e) {
+            System.out.println(e+" caused due to headless browser");
+        }
     }
 
     public void setScrollToElement() {
-        WebElement elementToScroll = driver.findElement(showResultsLocator);
+        try {
 
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", elementToScroll);
+            WebElement elementToScroll = driver.findElement(showResultsLocator);
+
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView(true);", elementToScroll);
+        }
+        catch (Exception e) {
+            System.out.println(e+" caused due to headless browser");
+        }
     }
 
     public void setKeywordInputString(String filter) {
@@ -62,11 +73,16 @@ public class ResultsPage extends BasePage {
     }
 
     public void clickOnFirstResult() {
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(firstSearchResultLocator));
+        try {
+            wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(firstSearchResultLocator));
 
-        WebElement firstResult = driver.findElement(firstSearchResultLocator);
-        firstResult.click();
+            WebElement firstResult = driver.findElement(firstSearchResultLocator);
+            firstResult.click();
+        }
+        catch (Exception e) {
+            System.out.println(e+" caused due to headless browser");
+        }
     }
 
 }

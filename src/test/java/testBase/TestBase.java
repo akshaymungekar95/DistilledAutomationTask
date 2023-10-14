@@ -27,7 +27,15 @@ public class TestBase {
 
 		if (browser.equalsIgnoreCase(Browsers.CHROME.name())) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--no-sandbox");
+			options.addArguments("--disable-dev-shm-usage");
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+			capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+			options.merge(capabilities);
+
+			driver = new ChromeDriver(options);
 			driver.manage().window().maximize();
 		} else if (browser.equalsIgnoreCase(Browsers.FIREFOX.name())) {
 			WebDriverManager.firefoxdriver().setup();

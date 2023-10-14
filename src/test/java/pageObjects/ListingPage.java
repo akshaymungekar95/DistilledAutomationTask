@@ -45,7 +45,6 @@ public class ListingPage extends BasePage {
         List<WebElement> propertyFeatures = driver.findElements(propertyFeaturesLocator);
         boolean flag = false;
         for (WebElement propFeature : propertyFeatures) {
-            System.out.println(propFeature.getText());
             if (propFeature.getText().toLowerCase().contains(filter.toLowerCase())) {
                 flag = true;
                 break;
@@ -55,7 +54,6 @@ public class ListingPage extends BasePage {
     }
     public boolean setCapturePropertyDescription(String filter) {
         WebElement propertyDesc = driver.findElement(propertyDescriptionLocator);
-        System.out.println(propertyDesc.getText());
         return propertyDesc.getText().toLowerCase().contains(filter.toLowerCase());
     }
 
