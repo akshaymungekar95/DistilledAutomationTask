@@ -12,6 +12,7 @@ import org.junit.runner.RunWith;
 					plugin= {
 							"pretty",
 							"html:target/cucumber-reports/CucumberTestReport.html",
+							"html:target/cucumber-reports/index.html",
 							"json:target/cucumber-reports/CucumberTestReport.json",
 							"rerun:target/cucumber-reports/rerun.txt"
 							},
