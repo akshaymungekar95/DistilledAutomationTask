@@ -53,8 +53,8 @@ Before you begin, make sure you have the following prerequisites installed:
 
 ## Getting Started,
 
-1. Clone this repository to your local machine.
-git clone https://github.com/akshaymungekar95/DistilledAutomationTask.git
+1. Clone this repository to your local machine,<br>
+```git clone https://github.com/akshaymungekar95/DistilledAutomationTask.git```
 
 ## For executing tests on browser,
 
