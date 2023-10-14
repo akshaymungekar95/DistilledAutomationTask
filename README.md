@@ -15,7 +15,7 @@
 
 ## The Problem
 User search properties for sale in Dublin(County) and filter the results based on garage keyword.
-Validate the search results after applying the filter, and open a specificresult to check the presence of "garage" keyword on that advert.
+Validate the search results after applying the filter, and open a specific result to check the presence of "garage" keyword on that advert.
 
 ## Table of Contents
 
