@@ -65,7 +65,7 @@ Before you begin, make sure you have the following prerequisites installed:
 2.2 Update the following line,<br>
 ```testBase.selectBrowser(Browsers.HEADLESS.name()); ```<br>
 	TO<br>
-	``` testBase.selectBrowser(Browsers.CHROME.name()); ```
+	``` testBase.selectBrowser(Browsers.CHROME.name()); ```<br>
  	OR<br>
   	``` testBase.selectBrowser(Browsers.FIREFOX.name()); ```
 				   
