@@ -66,6 +66,8 @@ Before you begin, make sure you have the following prerequisites installed:
 ```testBase.selectBrowser(Browsers.HEADLESS.name()); ```<br>
 	TO<br>
 	``` testBase.selectBrowser(Browsers.CHROME.name()); ```
+ 	OR<br>
+  	``` testBase.selectBrowser(Browsers.FIREFOX.name()); ```
 				   
 2.3 Execute the following command,<br>
 	```mvn clean install```
