@@ -56,7 +56,7 @@ Before you begin, make sure you have the following prerequisites installed:
 1. Clone this repository to your local machine,<br>
 ```git clone https://github.com/akshaymungekar95/DistilledAutomationTask.git```
 
-## For executing tests on headed browser,
+### For executing tests on headed browser,
 
 
 2.1 Navigate to the project's root directory,<br>
@@ -72,14 +72,14 @@ Before you begin, make sure you have the following prerequisites installed:
 2.3 Execute the following command,<br>
 	```mvn clean install```
 	
-## For executing tests on headless browser,
+### For executing tests on headless browser,
 3.1 Navigate to the project's root directory,<br>
 ```cd DistilledAutomationTask```
 
 3.2  Execute the following command,<br>
 ```mvn clean install```
 
-## For executing tests using Github Actions workflow (CI pipeline),
+### For executing tests using Github Actions workflow (CI pipeline),
 4.1 Commit and push a change to the repository to automatically trigger the workflow,<br>
 OR<br>
 4.2 Navigate to the Actions tab on the GitHub UI and Re-run the topmost 'cucumber-ci.yml' workflow runs,<br>
