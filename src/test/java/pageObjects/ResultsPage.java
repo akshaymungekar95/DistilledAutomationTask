@@ -5,9 +5,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 import java.util.List;
 
 public class ResultsPage extends BasePage {
@@ -15,14 +12,11 @@ public class ResultsPage extends BasePage {
     public ResultsPage(WebDriver driver) {
         super(driver);
     }
-    public By resultsLocator = By.xpath("(//ul[@data-testid=\"results\"]/li[@class='SearchPagestyled__Result-v8jvjf-2 iWPGnb'])[1]");
-
+    public By resultsLocator = By.xpath("//ul[@data-testid=\"results\"]/li[contains(@data-testid, " +
+                                                        "'result')]");
     public By filterLocator = By.cssSelector("button[aria-label='Filters']");
-
     public By showResultsLocator = By.cssSelector("button[data-testid='filters-modal-show-results-button']");
-
     public By keywordInputLocator = By.cssSelector("#keywordtermsModal");
-
     public By firstSearchResultLocator = By.xpath("//ul[@data-testid=\"results\"]/li[1]");
 
 
@@ -74,15 +68,13 @@ public class ResultsPage extends BasePage {
 
     public void clickOnFirstResult() {
         try {
-            wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            wait.until(ExpectedConditions.visibilityOfElementLocated(firstSearchResultLocator));
-
             WebElement firstResult = driver.findElement(firstSearchResultLocator);
+            wait.until(ExpectedConditions.visibilityOf(firstResult));
+
             firstResult.click();
         }
         catch (Exception e) {
-            System.out.println(e+" caused due to headless browser");
+            System.out.println(e+" It must be due to headless browser");
         }
     }
-
 }

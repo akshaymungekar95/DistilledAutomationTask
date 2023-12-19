@@ -5,9 +5,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 import java.util.List;
 
 public class ListingPage extends BasePage {
@@ -22,17 +19,13 @@ public class ListingPage extends BasePage {
 
 
     public void setScrollToDescElement() {
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(propertyDescriptionLocator));
-
         WebElement elementToScroll = driver.findElement(propertyDescriptionLocator);
-
+        wait.until(ExpectedConditions.visibilityOfElementLocated(propertyDescriptionLocator));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", elementToScroll);
     }
 
     public void setScrollToPropertyElement() {
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(lastPropertyFeatureLocator));
 
         WebElement elementToScroll = driver.findElement(lastPropertyFeatureLocator);
@@ -59,13 +52,11 @@ public class ListingPage extends BasePage {
 
     public void hideSurvey() {
         try {
-            wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            wait.until(ExpectedConditions.visibilityOfElementLocated(hideSurveyLocator));
             WebElement hideSurvey = driver.findElement(hideSurveyLocator);
             hideSurvey.click();
         }
-        catch (Exception e) {
-            System.out.println(e+" caused due to headless browser");
+        catch (Exception exp) {
+            System.out.println(exp+" Popup didn't appear or it must be a headless browser");
         }
     }
 }

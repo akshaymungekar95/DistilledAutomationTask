@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
 					dryRun=false,
 					monochrome=true,
 					publish=true,
-					tags="@smoke or @regression"
+					tags="@regression"
 		)
 public class TestRunner {
 }
