@@ -53,7 +53,7 @@ public class ResultsPageSteps extends TestBase {
 
     @When("user opens a search result")
     public void user_opens_a_search_result() throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         rp = new ResultsPage(driver);
         rp.setScrollToFirstResultElement();
 

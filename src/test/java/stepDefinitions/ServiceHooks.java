@@ -14,7 +14,7 @@ public class ServiceHooks {
 	public void initializeTest() throws IOException {
 		testBase = new TestBase();
         testBase.propertyInitializer();
-		testBase.selectBrowser(Browsers.CHROME.name());
+		testBase.selectBrowser(Browsers.FIREFOX.name());
 	}
 
 	@After
